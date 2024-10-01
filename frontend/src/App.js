@@ -150,7 +150,7 @@ function App() {
 
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='/lyriclabs'>
             <div>
                 <TopBar userData={userData} sx={{ backgroundColor: theme.palette.background.default }} />
             </div>
@@ -175,8 +175,8 @@ function App() {
 
                 <div className="App">
                     {isInitialDataLoaded ? (
-                        <Routes>
-                            <Route path="/" element={<Home userLoggedIn={userLoggedIn} />} />
+                        <Routes location={"/lyriclabs"}>
+                            <Route path="" element={<Home userLoggedIn={userLoggedIn} />} />
                             <Route path="/signup" element={<Signup />} />
                             <Route path="/lobby/:roomID" element={<Lobby />} />
                             <Route path="/practice/:roomID" element={<Practice />} />

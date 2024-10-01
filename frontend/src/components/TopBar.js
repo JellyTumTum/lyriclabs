@@ -42,7 +42,7 @@ const TopBar = (props) => {
 
     const goHome = () => {
         // navigate('/');
-        window.location.href = '/';
+        window.location.href = '/lyriclabs';
     }
 
     const handleLogout = async () => {
@@ -59,7 +59,7 @@ const TopBar = (props) => {
             console.error('Error logging out user: ', error);
         }
         localStorage.removeItem("jwtToken");
-        window.location.href = '/';
+        window.location.href = '';
 
     }
 
