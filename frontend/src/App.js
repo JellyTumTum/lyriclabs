@@ -175,7 +175,7 @@ function App() {
 
                 <div className="App">
                     {isInitialDataLoaded ? (
-                        <Routes location={"/lyriclabs"}>
+                        <Routes>
                             <Route path="" element={<Home userLoggedIn={userLoggedIn} />} />
                             <Route path="/signup" element={<Signup />} />
                             <Route path="/lobby/:roomID" element={<Lobby />} />

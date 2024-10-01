@@ -138,14 +138,14 @@ const Practice = () => {
             console.log("sent disconnection message to backend");
             closeWebSocket();
             // navigate('/');
-            window.location.href = '/';
+            window.location.href = '/lyriclabs';
 
         }
     }
 
     function redirectToGame() {
         console.log("Kinda Implemented");
-        let redirect = "/solo/" + roomID;
+        let redirect = "/lyriclabs/solo/" + roomID;
         window.location.href = redirect; // need to use over navigate to make websocket logic function. 
     }
 
@@ -232,7 +232,7 @@ const Practice = () => {
                                 setRoomValid(false);
                                 closeWebSocket();
                                 // navigate('/');
-                                window.location.href = '/';
+                                window.location.href = '/lyriclabs';
 
                             }
                             if (responseBody.responseMessage.includes("has joined the Room")) {
@@ -243,7 +243,7 @@ const Practice = () => {
                             if (responseBody.responseMessage.includes("force-closed")) {
                                 closeWebSocket();
                                 // navigate('/');
-                                window.location.href = '/';
+                                window.location.href = '/lyriclabs';
                             }
                             if (responseBody.responseMessage.includes("left the lobby")) {
                                 setUsers(responseBody.currentPlayers);
@@ -307,14 +307,14 @@ const Practice = () => {
                                 }
                             } if (responseBody.responseMessage.includes("[SWITCH_MODE]")) {
                                 localStorage.setItem('notification', responseBody.notification);
-                                window.location.href = "/lobby/" + roomID;
+                                window.location.href = "/lyriclabs/lobby/" + roomID;
                             } if (responseBody.responseMessage.includes("[Close Window]")) {
                                 localStorage.setItem('notification', responseBody.notification);
-                                window.location.href = "/";
+                                window.location.href = "/lyriclabs";
                             }
                             if (responseBody.responseMessage.includes("[CLOSE_WINDOW]")) {
                                 localStorage.setItem('notification', responseBody.notification);
-                                window.location.href = "/";
+                                window.location.href = "/lyriclabs";
                             }
 
                         }

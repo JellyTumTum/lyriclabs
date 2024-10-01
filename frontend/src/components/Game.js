@@ -83,7 +83,7 @@ const Game = () => {
             clearTimeout(timeout);
             console.log("WebSocket closed.");
             localStorage.setItem('notification', 'Socket Closed|The connection for the room was ended');
-            window.location.href = '/'; // TODO: uncomment
+            window.location.href = '/lyriclabs'; // TODO: uncomment
         } else {
             console.log("not recived a response yet, so no need to close webSocket");
         }
@@ -98,7 +98,7 @@ const Game = () => {
             console.log("sent disconnection message to backend");
             closeWebSocket();
             // navigate('/');
-            window.location.href = '/';
+            window.location.href = '/lyriclabs';
         }
     }
 
@@ -137,7 +137,7 @@ const Game = () => {
     }
 
     function handlePostGameAnalysis() {
-        window.location.href = `/game-stats/${roomID}`;
+        window.location.href = `lyriclabs/game-stats/${roomID}`;
     }
 
     const handleNewHistory = (newData) => {
@@ -263,7 +263,7 @@ const Game = () => {
                                 closeWebSocket();
                                 localStorage.setItem('notification', responseBody.notification);
                                 // navigate('/');
-                                window.location.href = '/';
+                                window.location.href = '/lyriclabs';
                             }
                             if (responseBody.responseMessage.includes("has joined the Room")) {
                                 const isHost = responseBody.responseMessage.startsWith("[H]");
@@ -289,7 +289,7 @@ const Game = () => {
                                 localStorage.setItem('notification', 'Force Closure|The lobby you were in seems to of been force-closed. sorry about that');
                                 closeWebSocket();
                                 // navigate('/');
-                                window.location.href = '/';
+                                window.location.href = '/lyriclabs';
                             }
                             if (responseBody.responseMessage.includes("left the game")) {
                                 // TODO: implement backend call relating to and frontend logic. Just Darken scoreboard entry or something similar to note they are gone. 
@@ -427,11 +427,11 @@ const Game = () => {
 
                             } if (responseBody.responseMessage.includes("[Close Window]")) {
                                 localStorage.setItem('notification', responseBody.notification);
-                                window.location.href = "/";
+                                window.location.href = "/lyriclabs";
                             }
                             if (responseBody.responseMessage.includes("[CLOSE_WINDOW]")) {
                                 localStorage.setItem('notification', responseBody.notification);
-                                window.location.href = "/";
+                                window.location.href = "/lyriclabs";
                             }
                         }
                     });

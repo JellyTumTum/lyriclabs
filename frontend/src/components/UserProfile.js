@@ -20,6 +20,8 @@ function UserProfile() {
 
   useEffect(() => {
 
+    // NOT USED
+
     const getData = async (username) => {
       try {
         const response = await axios.post('http://localhost:8080/stats/getstats', { username: username }, // currently auth and credentials are disabled as they should not be needed.

@@ -90,7 +90,7 @@ const PracticeGame = () => {
             closeWebSocket();
             // navigate('/');
             console.log("reference 1");
-            window.location.href = '/';
+            window.location.href = '/lyriclabs';
 
         }
     }

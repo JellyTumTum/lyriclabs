@@ -37,7 +37,7 @@ const Home = ({ userLoggedIn }) => {
                 window.dispatchEvent(event);
 
             } else {
-                navigate(`/lobby/${roomData.roomId}`);
+                navigate(`/lyriclabs/lobby/${roomData.roomId}`);
             }
 
 
@@ -67,7 +67,7 @@ const Home = ({ userLoggedIn }) => {
             const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/room/practice`, { headers });
             const roomData = response.data;
 
-            navigate(`/practice/${roomData.roomId}`);
+            navigate(`/lyriclabs/practice/${roomData.roomId}`);
 
         } catch (error) {
             // console.error('Error creating room:', error);
@@ -84,7 +84,7 @@ const Home = ({ userLoggedIn }) => {
     };
 
     const goToResults = () => {
-        navigate("/results");
+        navigate("lyriclabs/results");
     }
 
     const testNotification = () => {

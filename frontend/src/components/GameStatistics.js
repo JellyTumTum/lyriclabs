@@ -109,7 +109,7 @@ const GameStatistics = () => {
                         localStorage.setItem('notification', response.data.notification);
                         const event = new CustomEvent('notificationSet');
                         window.dispatchEvent(event);
-                        navigate('/');
+                        navigate('/lyriclabs');
 
                 } else {
                     setLoadedInit(true);
@@ -127,7 +127,7 @@ const GameStatistics = () => {
                 const event = new CustomEvent('notificationSet', {});
                 window.dispatchEvent(event);
                 setLoadedInit(false);
-                navigate("/");
+                navigate("/lyriclabs");
             }
         };
         if (!loadedInit) {

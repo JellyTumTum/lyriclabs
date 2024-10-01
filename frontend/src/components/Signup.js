@@ -64,7 +64,7 @@ const Signup = () => {
                 // succesful login
                 localStorage.setItem('jwtToken', loginResponse.jwt);
                 localStorage.setItem('notification', 'Logged In|You have been logged in as ' + loginResponse.username);
-                window.location.href = ('/');
+                window.location.href = ('/lyriclabs');
 
             }
         } catch (error) {

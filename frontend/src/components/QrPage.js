@@ -11,7 +11,7 @@ const QrPage = () => {
     const navigate = useNavigate();
 
     const goHome = () => {
-        navigate('/');
+        navigate('/lyriclabs');
     }
 
     return (

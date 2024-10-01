@@ -180,7 +180,7 @@ const Results = () => {
             console.log(element);
             if (element.length > 0) {
                 const roomID = roomScatterGraphData.datasets[element[0].datasetIndex].data[0].roomID;
-                window.open(`/game-stats/${roomID}`, '_blank');
+                window.open(`/lyriclabs/game-stats/${roomID}`, '_blank');
             }
 
         }
