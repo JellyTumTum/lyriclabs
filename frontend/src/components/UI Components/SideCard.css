@@ -1,0 +1,20 @@
+.sideCard {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #07ff07;
+    box-shadow: 2px 2px 15px #000000 inset;
+    color: #e8e8e8;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* align-content: center; */
+    font-family: 'Pacifico', cursive;
+    transition: color 0.3s, box-shadow 0.3s; 
+  }
+  
+  .sideCard:hover {
+    color: #07ff07;
+    box-shadow: 2px 2px 15px #07ff07 inset;
+  }
+  

@@ -1,0 +1,23 @@
+
+.card {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-image: linear-gradient(163deg, #00ff75 0%, #1E1E1E 100%);
+    border-radius: 5%;
+    transition: all .3s;
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30); /* Always present shadow */
+   }
+   
+   .card2 {
+    width: 95%;
+    height: 95%;
+    justify-content: center;
+    background-color: #1a1a1a;
+    border-radius: 5%; /* Corrected to ensure border-radius is set */
+    transition: all .2s;
+    transform: scale(0.98); /* Always present scale */
+   }
+   
